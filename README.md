@@ -1,27 +1,33 @@
-### Market AI Agent: Purpose Definition
-## What is the agent's purpose?
+#  AI ReAct Agent with Keyword Extraction & Web Scraping
 
-#### The Market AI Agent is built to plan, create, execute, and optimize marketing campaigns autonomously—without waiting on human intervention. It acts as an all-in-one marketing strategist, copywriter, campaign manager, and performance analyst.
+This project uses a **LangGraph-based ReAct agent** to:
 
-## What problems will it solve?
+- Extract **search keywords** from a user query.
+- Use **Firecrawl MCP tools** to search and summarize web content.
+- Return a **summarized response** via a React frontend.
 
-1. Time-consuming manual campaign planning
-2. Delays in content creation and ad copywriting
-3. Inefficiencies in cross-platform campaign launches
-4. Lack of real-time performance analysis and optimization
-5. Inability to adapt quickly based on results
+---
 
-## What tasks will it perform?
+##  Tech Stack
 
-1. Campaign Planning – Automatically generates marketing plans based on business goals, industry, and audience.
+- **Frontend**: React + Tailwind CSS  
+- **Backend**: Flask + LangGraph + Firecrawl + MCP Tools  
+- **LLM Model**: DeepSeek (via OpenRouter)  
+- **Keyword Extraction**: Custom tool with LangChain  
+- **Web Scraping & Summarization**: Firecrawl MCP  
+- **Agent Orchestration**: LangGraph (ReAct agent)
 
-2. Content Creation – Writes high-converting landing pages, social media posts, and ad copy.
+---
 
-3. Campaign Execution – Launches campaigns across platforms like Facebook, Google, LinkedIn, etc.
+##  How It Works
 
-4. Performance Tracking – Monitors KPIs and provides real-time feedback on what’s working.
+1. **User enters a query** in the React frontend.
+2. **Flask backend**:
+   - Extracts keywords using a system prompt.
+   - Sends keywords to a ReAct agent (LangGraph).
+   - Agent uses Firecrawl tools to search and summarize content.
+3. **Summarized result** is returned and displayed in the frontend.
 
-5. Optimization & Relaunch – Uses performance data to continuously test, learn, and relaunch improved versions—autonomously.
+---
 
-### In one-line summary :
-#### Your full-stack marketing team in an AI agent — planning, creating, launching, learning, and optimizing without the bottlenecks.
+ Built for intelligent, explainable, and reactive content recommendations.

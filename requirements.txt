@@ -1,0 +1,10 @@
+flask
+flask-cors
+langgraph==0.0.36
+langchain==0.2.1
+langchain-openai
+langchain-google-genai
+langchain-community
+firecrawl-mcp
+openai
+python-dotenv
